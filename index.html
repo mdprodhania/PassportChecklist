@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Passport Checklist</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+</head>
+<body>
+  <h1>Passport Docs Tracker</h1>
+
+  <form id="passportForm">
+    <input type="text" id="clientName" placeholder="Client Name" />
+    <input type="text" id="passportNumber" placeholder="Passport Number" />
+    <input type="text" id="expiryDate" placeholder="Expiry Date (YYYY-MM-DD)" />
+    <button type="submit">Add Entry</button>
+  </form>
+
+  <section id="checklist"></section>
+
+  <script src="script.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js');
+    }
+  </script>
+</body>
+</html>
